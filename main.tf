@@ -6,10 +6,15 @@ terraform {
     }
   }
 }
+
+variable "subscription_id" {}
+
 provider "azurerm" {
   features {
   }
+  subscription_id = var.subscription_id
 }
+
 resource "random_integer" "rnd" {
   min = 10000
   max = 99999
