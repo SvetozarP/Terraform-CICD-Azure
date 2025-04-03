@@ -13,10 +13,12 @@ terraform {
   }
 }
 
+variable "subscription_id" {}
+
 provider "azurerm" {
   features {
   }
-  subscription_id = getenv("ARM_SUBSCRIPTION_ID")
+  subscription_id = var.subscription_id
 }
 
 
