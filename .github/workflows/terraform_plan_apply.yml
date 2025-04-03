@@ -28,6 +28,10 @@ jobs:
       with:
         creds: ${{ secrets.ARM_CREDENTIALS }}
 
+    # Force unlock the state file (if it is locked)
+    - name: Force Unlock Terraform State
+      run: terraform force-unlock 920d0141-3f4f-8eae-4e28-da1c7ba87a5c || echo "State already unlocked or no lock present"
+
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
