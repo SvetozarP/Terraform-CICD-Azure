@@ -5,6 +5,12 @@ terraform {
       version = "4.25.0"
     }
   }
+  backend "azurerm" {
+    resource_group_name  = "StorageAccountRGSP"
+    storage_account_name = "spstacctb"
+    container_name       = "staccconsp123"
+    key                  = "terraform.tfstate"
+  }
 }
 
 variable "subscription_id" {}
@@ -14,6 +20,8 @@ provider "azurerm" {
   }
   subscription_id = var.subscription_id
 }
+
+
 
 resource "random_integer" "rnd" {
   min = 10000

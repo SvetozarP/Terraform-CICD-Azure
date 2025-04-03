@@ -4,3 +4,14 @@
 .terraform/providers/registry.terraform.io/hashicorp/random/3.7.1/windows_amd64/LICENSE.txt
 .terraform/providers/registry.terraform.io/hashicorp/random/3.7.1/windows_amd64/terraform-provider-random_v3.7.1_x5.exe
 secret_add_env_subs_id
+ARMStorageAccountTf/main.tf
+ARMStorageAccountTf/terraform.tfvars
+ARMStorageAccountTf/variables.tf
+ARMStorageAccountTf/.terraform.tfstate.lock.info
+ARMStorageAccountTf/terraform.tfstate
+ARMStorageAccountTf/.terraform/providers/registry.terraform.io/hashicorp/azurerm/4.25.0/windows_amd64/LICENSE.txt
+ARMStorageAccountTf/.terraform/providers/registry.terraform.io/hashicorp/azurerm/4.25.0/windows_amd64/terraform-provider-azurerm_v4.25.0_x5.exe
+ARMStorageAccountTf/terraform.tfstate.backup
+ServicePrincipalTerraform/main.tf
+ServicePrincipalTerraform/terraform.tfvars
+ServicePrincipalTerraform/variables.tf
