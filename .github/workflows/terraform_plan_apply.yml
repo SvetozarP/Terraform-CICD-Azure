@@ -42,7 +42,7 @@ jobs:
 
     # Generate Terraform plan
     - name: Terraform Plan
-      run: terraform plan -out=tfplan
+      run: terraform plan -out=tfplan -lock=false
 
     # Save plan to Artefact
     - name: Save Terraform plan artefact
@@ -76,4 +76,4 @@ jobs:
 
     # Apply the terraform plan
     - name: Apply Terraform Plan
-      run: terraform apply -auto-approve tfplan -lock=false
+      run: terraform apply -auto-approve tfplan
