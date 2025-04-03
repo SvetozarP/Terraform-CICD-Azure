@@ -15,3 +15,4 @@ ARMStorageAccountTf/terraform.tfstate.backup
 ServicePrincipalTerraform/main.tf
 ServicePrincipalTerraform/terraform.tfvars
 ServicePrincipalTerraform/variables.tf
+.terraform/terraform.tfstate
