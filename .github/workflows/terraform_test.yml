@@ -41,4 +41,3 @@ jobs:
       uses: benc-uk/workflow-dispatch@v1
       with:
         workflow: terraform_plan_apply.yml
-        token: ${{ secrets.GITHUB_TOKEN }}
