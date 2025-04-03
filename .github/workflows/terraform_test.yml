@@ -37,7 +37,9 @@ jobs:
       run: terraform validate
 
     #Trigger the next step
-    - name: Trigger Plan Apply Workflow
-      uses: benc-uk/workflow-dispatch@v1
-      with:
-        workflow: terraform_plan_apply.yml
+    - name: Trigger Another Workflow
+      run: |
+        curl -X POST -H "Accept: application/vnd.github.v3+json" \
+           -H "Authorization: token ${{ secrets.GH_PAT }}" \
+           https://api.github.com/repos/SvetozarP/Terraform-CICD-Azure/actions/workflows/terraform_plan_apply.yml/dispatches \
+           -d '{"ref":"main"}'
